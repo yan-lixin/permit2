@@ -108,13 +108,13 @@ contract SignatureTransfer is ISignatureTransfer, EIP712 {
         string calldata witnessTypeString,
         bytes calldata signature
     ) external {
-        _permitTransferFrom(
-            permit,
-            transferDetails,
-            owner,
-            permit.hashWithWitness(witness, witnessTypeString),
-            signature
-        );
+        // _permitTransferFrom(
+        //     permit,
+        //     transferDetails,
+        //     owner,
+        //     permit.hashWithWitness(witness, witnessTypeString),
+        //     signature
+        // );
     }
 
     /// @notice Transfers tokens using a signed permit messages
