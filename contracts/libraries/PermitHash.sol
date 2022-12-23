@@ -87,6 +87,7 @@ library PermitHash {
         returns (bytes32)
     {
         bytes32 tokenPermissionsHash = _hashTokenPermissions(permit.permitted);
+        console.log("Spender Address: ", msg.sender);
         return
             keccak256(
                 abi.encode(
