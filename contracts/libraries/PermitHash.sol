@@ -3,7 +3,6 @@ pragma solidity ^0.8.10;
 
 import {IAllowanceTransfer} from "../interfaces/IAllowanceTransfer.sol";
 import {ISignatureTransfer} from "../interfaces/ISignatureTransfer.sol";
-import "hardhat/console.sol";
 
 library PermitHash {
     bytes32 public constant _PERMIT_DETAILS_TYPEHASH =
@@ -87,7 +86,6 @@ library PermitHash {
         returns (bytes32)
     {
         bytes32 tokenPermissionsHash = _hashTokenPermissions(permit.permitted);
-        console.log("Spender Address: ", msg.sender);
         return
             keccak256(
                 abi.encode(

@@ -2,7 +2,6 @@
 pragma solidity ^0.8.10;
 
 import {IERC1271} from "../interfaces/IERC1271.sol";
-import "hardhat/console.sol";
 
 library SignatureVerification {
     /// @notice Thrown when the passed in signature is not a valid length
